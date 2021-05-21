@@ -1,1 +1,10 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    padding: 0px 15px;
+}
