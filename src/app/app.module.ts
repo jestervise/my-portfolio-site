@@ -7,6 +7,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AboutComponent } from './pages/about/about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SitemapComponent } from './components/sitemap/sitemap.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { HeaderComponent } from './components/header/header.component';
     HomeComponent,
     ContactComponent,
     ProjectsComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutComponent,
+    FooterComponent,
+    SitemapComponent
   ],
   imports: [
     BrowserModule,

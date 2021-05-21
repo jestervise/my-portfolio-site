@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  isDarkMode:boolean= false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,6 +17,11 @@ export class HeaderComponent implements OnInit {
   scrollTo(link:string){
     
     console.log("scroll to contact")
+  }
+
+  switchTheme(){
+    this.isDarkMode = !this.isDarkMode
+    console.log(this.isDarkMode);
   }
 
 }
