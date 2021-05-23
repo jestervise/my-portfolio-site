@@ -1,1 +1,8 @@
-<p>footer works!</p>
+<footer class="footer hidden md:flex">
+  <div class="mute-unmute w-4" (click)="switchMuteStatus()">
+    <img [src]="isMuted?'assets/images/mute.svg':'assets/images/unmute.svg'" alt="mute" >
+  </div>
+  <div class="locale-changer" (click)="switchLocale()">
+    {{locale}}
+  </div>
+</footer>

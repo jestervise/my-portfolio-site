@@ -1,0 +1,24 @@
+.height-85vh {
+  height: 85vh;
+}
+
+.headline {
+  @apply font-bold mb-4;
+  p {
+    color: #fe6724;
+    font-size: 0.8em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+.scroll {
+  padding: 1em 0;
+  p {
+    @apply mt-1 font-thin;
+    font-size: 0.6em;
+    opacity: 0.6;
+  }
+}

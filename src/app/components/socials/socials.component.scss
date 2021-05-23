@@ -1,0 +1,15 @@
+@import "tailwindcss/utilities";
+
+@layer utilities {
+  @variants responsive {
+    .side-bar {
+      @apply block fixed right-0 pr-4;
+      top: 50%;
+
+      a {
+        @apply mb-3 w-5;
+        display: block;
+      }
+    }
+  }
+}
