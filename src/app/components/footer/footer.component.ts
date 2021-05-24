@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkModeService } from 'src/app/services/dark-mode.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,7 +11,7 @@ export class FooterComponent implements OnInit {
   LOCALE_LIST = ['en-US','cn'];
   isMuted = false;
 
-  constructor() { }
+  constructor(private darkModeService:DarkModeService) { }
 
   ngOnInit(): void {
     const language = navigator.languages.find((l)=>l.includes("en") || l.includes("zh") || l.includes("cn"));
@@ -23,5 +24,9 @@ export class FooterComponent implements OnInit {
 
   switchMuteStatus(){
     this.isMuted = !this.isMuted;
+  }
+
+  getDarkMode(){
+    return this.darkModeService.getIsDarkMode();
   }
 }

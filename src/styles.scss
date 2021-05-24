@@ -3,12 +3,22 @@
 @import "tailwindcss/utilities";
 /* You can add global styles to this file, and also import other style files */
 
+@layer utilities {
+    @variants dark {
+        .background-dark{
+            background-color:#212121;
+        }
+    
+    }
+}
+
 body {
   margin: 0;
   font-family: "Open Sans", "Sans Serif";
   box-sizing: border-box;
   padding: 0px 1em;
   width: 100vw;
+  transition: background-color .5s ease-in-out .15s;
 }
 
 img {

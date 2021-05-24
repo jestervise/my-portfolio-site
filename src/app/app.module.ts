@@ -26,7 +26,7 @@ import { SocialsComponent } from './components/socials/socials.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

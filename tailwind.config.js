@@ -15,7 +15,11 @@ module.exports = {
       extend: {},
       colors: {
         // Configure your color palette here
-      }
+      },
+      textColor: {
+        white: "#FFF", 
+        black: "#000",  
+      },
     },
     variants: {
       extend: {},

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkModeService } from 'src/app/services/dark-mode.service';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,10 @@ export class HeaderComponent implements OnInit {
 
   isDarkMode:boolean= false;
 
-  constructor() { }
+  constructor(private darkModeService:DarkModeService) { }
 
   ngOnInit(): void {
+    this.isDarkMode = this.darkModeService.init();
   }
 
   scrollTo(link:string){
@@ -20,8 +22,7 @@ export class HeaderComponent implements OnInit {
   }
 
   switchTheme(){
-    this.isDarkMode = !this.isDarkMode
-    console.log(this.isDarkMode);
+    this.isDarkMode = this.darkModeService.setIsDarkMode(!this.isDarkMode);
   }
 
 }
