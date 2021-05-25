@@ -1,28 +1,27 @@
-<div class="flex justify-between items-center min-h-full py-1 font-bold">
+<header class="flex justify-between items-center min-h-full py-1 font-bold">
 
-    <a class="contact min-w-min" routerLink="/">
-        <span class="mr-1">
-            <img src="assets/images/logo.svg" />
-        </span>
-
-    </a>
+    <div class="contact min-w-min flex place-content-center" >
+        <a class="mr-1" routerLink="/">
+            <img src="assets/images/logo.svg" class="w-8 h-6"/>
+        </a>
+      </div>
     <!-- darkmode trigger -->
-    <div (click)="switchTheme()">
-        <img [src]="'assets/images/'+isDarkMode?'moon.svg':'sun.svg'" >
+    <div (click)="switchTheme()" class="hidden md:block">
+        <img [src]="isDarkMode?'assets/images/moon.svg':'assets/images/sun.svg'" >
     </div>
     <!-- right content -->
-    <div class="right-header">
-      <a i18n="project" class="text-blue-500" routerLink="/project">
+    <ul class="right-header font-light flex flex-row justify-between">
+      <li i18n="project" class="header-item" routerLink="/project">
         Project
-      </a>
-      <a i18n="contact" class="text-blue-500" routerLink="/contact">
+      </li>
+      <li i18n="contact" class="header-item" routerLink="/contact">
         Contact
-      </a>
-      <a i18n="about" class="text-blue-500" routerLink="/about">
+      </li>
+      <li i18n="about" class="header-item" routerLink="/about">
         About
-      </a>
-    </div>
+      </li>
+    </ul>
 
 
 
-</div>
+  </header>
