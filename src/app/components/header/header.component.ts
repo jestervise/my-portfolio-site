@@ -14,6 +14,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.isDarkMode = this.darkModeService.init();
+    this.darkModeService.darkMode$.subscribe((mode)=>{
+      this.isDarkMode = mode;
+    })
   }
 
   scrollTo(link:string){
@@ -22,7 +25,7 @@ export class HeaderComponent implements OnInit {
   }
 
   switchTheme(){
-    this.isDarkMode = this.darkModeService.setIsDarkMode(!this.isDarkMode);
+    this.darkModeService.changeToDarkMode(!this.isDarkMode);
   }
 
 }
