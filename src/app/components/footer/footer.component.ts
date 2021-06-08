@@ -10,12 +10,17 @@ export class FooterComponent implements OnInit {
   locale= '';
   LOCALE_LIST = ['en-US','cn'];
   isMuted = false;
+  isDarkMode = false;
 
   constructor(private darkModeService:DarkModeService) { }
 
   ngOnInit(): void {
     const language = navigator.languages.find((l)=>l.includes("en") || l.includes("zh") || l.includes("cn"));
     this.locale =language?language:this.LOCALE_LIST[0];
+
+    this.darkModeService.darkMode$.subscribe((mode)=>{
+      this.isDarkMode = mode;
+    })
   }
 
   switchLocale(){
@@ -26,7 +31,4 @@ export class FooterComponent implements OnInit {
     this.isMuted = !this.isMuted;
   }
 
-  getDarkMode(){
-    return this.darkModeService.getIsDarkMode();
-  }
 }

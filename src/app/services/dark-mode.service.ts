@@ -1,10 +1,20 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DarkModeService {
-  isDarkMode = false;
+  
+  private darkMode = new BehaviorSubject<boolean>(false);
+
+  darkMode$ = this.darkMode.asObservable();
+
+  changeToDarkMode(isDarkMode:boolean){
+    this.darkMode.next(isDarkMode);
+    localStorage.theme = isDarkMode?'dark':'light';
+    isDarkMode? document.documentElement.classList.add('dark'): document.documentElement.classList.remove('dark');
+  }
 
   constructor() { 
   }
@@ -12,28 +22,11 @@ export class DarkModeService {
   init(){
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
-      this.isDarkMode = true;
+      this.darkMode.next(true);
+      return true;
     } else {
-      document.documentElement.classList.remove('dark')
-      this.isDarkMode = false;
+      document.documentElement.classList.remove('dark');
+      return false;
     }
-
-    return this.isDarkMode;
-  }
-
-  getIsDarkMode(){
-    return this.isDarkMode;
-  }
-
-  setIsDarkMode(darkMode:boolean){
-    if(darkMode){
-      this.isDarkMode = true;
-    }else{
-      this.isDarkMode = false;
-    }
-
-    localStorage.theme = this.isDarkMode?'dark':'light';
-    this.isDarkMode? document.documentElement.classList.add('dark'): document.documentElement.classList.remove('dark');
-    return this.isDarkMode;
   }
 }
