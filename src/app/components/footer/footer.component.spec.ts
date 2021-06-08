@@ -22,4 +22,14 @@ describe('FooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should switch locale',()=>{
+    const locale = component.locale
+    if(locale =='en-US'){
+      component.switchLocale()
+      expect(component.locale).toEqual('cn')
+    }else{
+      expect(component.locale).toEqual('en-US')
+    }
+  })
 });
