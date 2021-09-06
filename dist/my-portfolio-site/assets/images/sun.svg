@@ -1,0 +1,6 @@
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="sun">
+<path id="ray" d="M5.01663 5.01663L3.22173 3.22173M11 0V2.53846V0ZM11 19.4615V22V19.4615ZM18.7783 3.22173L16.9834 5.01663L18.7783 3.22173ZM5.01663 16.9834L3.22173 18.7783L5.01663 16.9834ZM22 11H19.4615H22ZM2.53846 11H0H2.53846ZM18.7783 18.7783L16.9834 16.9834L18.7783 18.7783Z" stroke="black" stroke-width="1.69231" stroke-miterlimit="10" stroke-linecap="round"/>
+<path id="circle" d="M11 15.2308C13.3366 15.2308 15.2308 13.3366 15.2308 11C15.2308 8.66341 13.3366 6.76923 11 6.76923C8.66341 6.76923 6.76923 8.66341 6.76923 11C6.76923 13.3366 8.66341 15.2308 11 15.2308Z" stroke="black" stroke-width="1.69231" stroke-miterlimit="10" stroke-linecap="round"/>
+</g>
+</svg>
