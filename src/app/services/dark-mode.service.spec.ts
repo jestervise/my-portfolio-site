@@ -13,4 +13,6 @@ describe('DarkModeService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should change to dark color when pressed', () => {});
 });
